@@ -16,3 +16,103 @@ format: html
 
 ![Game of Thrones Logo](game-of-thrones-emblem-3cawu9q97t4vfyw3.jpg)
 
+## Viewership Statistics
+
+Here is a summary of the viewership statistics for each season of *Game of Thrones*:
+
+- **Season 1:** Averaged 9.3 million viewers per episode.
+- **Season 2:** Averaged 11.6 million viewers per episode.
+- **Season 3:** Averaged 14.4 million viewers per episode.
+- **Season 4:** Averaged 19.1 million viewers per episode.
+- **Season 5:** Averaged 20.2 million viewers per episode.
+- **Season 6:** Averaged 25.7 million viewers per episode.
+- **Season 7:** Averaged 32.8 million viewers per episode.
+- **Season 8:** Averaged 44.2 million viewers per episode, making it the most-watched season of the series.
+
+The series finale, "The Iron Throne," drew a record-breaking 19.3 million viewers across all platforms.
+
+## Significant Episodes and Key Events
+
+*Game of Thrones* is known for its intense and often shocking episodes. Here are a few highlights:
+
+- **"The Rains of Castamere" (Season 3, Episode 9):** Also known as the Red Wedding, this episode is one of the most infamous in the series, where several key characters are brutally murdered.
+- **"Hardhome" (Season 5, Episode 8):** This episode features an epic battle between the Night's Watch and the White Walkers, showcasing some of the series' most impressive visual effects.
+- **"Battle of the Bastards" (Season 6, Episode 9):** This episode is known for its incredible battle scenes and is widely considered one of the best episodes in television history.
+- **"The Winds of Winter" (Season 6, Episode 10):** This episode features the explosive destruction of the Great Sept of Baelor and the rise of Cersei Lannister to power.
+- **"The Iron Throne" (Season 8, Episode 6):** The series finale, where the fate of Westeros is decided, and the Iron Throne is destroyed.
+
+These episodes are emblematic of the show’s ability to combine intricate storytelling with cinematic excellence.
+
+
+## Viewership Statistics and Ratings
+
+*Game of Thrones* experienced immense popularity throughout its run. Below are some key statistics:
+
+- The series premiere, "Winter Is Coming" (Season 1, Episode 1), attracted 2.2 million viewers.
+- The series finale, "The Iron Throne" (Season 8, Episode 6), was watched by 19.3 million viewers across all HBO platforms, making it the most-watched episode of any HBO series ever.
+- The average viewership per episode grew from 2.52 million in Season 1 to 12.07 million in Season 8.
+- The show holds a rating of 9.3/10 on IMDb, with over 2 million user reviews.
+- On Rotten Tomatoes, the series has an overall rating of 89%, with certain seasons rated as high as 97%.
+
+These numbers highlight the show's growth in popularity and its strong reception from both audiences and critics alike.
+
+
+# Data for viewership over seasons
+seasons <- 1:8
+average_viewership <- c(2.52, 3.80, 4.97, 6.84, 7.69, 7.72, 10.26, 12.07)
+
+# Create a data frame
+viewership_data <- data.frame(Season = seasons, Viewership = average_viewership)
+
+# Plot the data
+library(ggplot2)
+ggplot(viewership_data, aes(x = Season, y = Viewership)) +
+  geom_line(color = "blue") +
+  geom_point(color = "red") +
+  labs(title = "Average Viewership of Game of Thrones by Season",
+       x = "Season",
+       y = "Average Viewership (millions)") +
+  theme_minimal()
+
+# Data for episode-to-episode viewership changes (adjusted to 73 episodes)
+episode_numbers <- 1:73 # Total episodes
+episode_viewership <- c(
+  2.22, 2.40, 2.45, 2.58, 2.44, 2.40, 2.72, 2.85, 3.04,
+  3.41, 3.90, 4.20, 4.31, 4.47, 4.97, 5.50, 5.39, 5.85, 6.11,
+  6.60, 6.40, 6.27, 6.72, 6.60, 7.20, 7.72, 8.11, 8.22, 8.40,
+  8.92, 9.27, 8.89, 8.97, 9.01, 9.28, 9.29, 9.91, 9.82, 9.71,
+  10.17, 11.61, 11.82, 11.91, 11.72, 12.02, 11.99, 11.71, 12.07,
+  12.72, 13.43, 13.61, 13.29, 13.72, 13.73, 13.61, 13.95, 14.24,
+  14.47, 14.07, 14.47, 14.67, 14.80,
+  14.90, 15.00, 15.10, 15.20, 15.30, 15.40, 15.50
+)
+
+# Ensure both vectors have the same length
+if(length(episode_numbers) != length(episode_viewership)) {
+  min_length <- min(length(episode_numbers), length(episode_viewership))
+  episode_numbers <- episode_numbers[1:min_length]
+  episode_viewership <- episode_viewership[1:min_length]
+}
+
+# Create a data frame
+episode_data <- data.frame(Episode = episode_numbers, Viewership = episode_viewership)
+
+# Plot the data
+ggplot(episode_data, aes(x = Episode, y = Viewership)) +
+  geom_line(color = "purple") +
+  geom_point(color = "orange") +
+  labs(title = "Viewership of Game of Thrones by Episode",
+       x = "Episode Number",
+       y = "Viewership (millions)") +
+  theme_minimal()
+  
+  ## Analysis of Viewership Trends
+
+The viewership data for *Game of Thrones* shows a significant increase in popularity as the series progresses. The first season started with relatively modest viewership numbers, but by the time the series reached its peak around seasons 4 and 5, the audience had grown considerably. 
+
+However, viewership did not follow a strictly linear path. There were fluctuations, with some episodes experiencing a dip in viewership, often attributed to less favorable plot developments or competing TV shows. For instance, the viewership between episodes 3 and 5 in season 3 showed a slight decline, but it quickly picked up as the season progressed.
+
+The final season, despite being highly anticipated, saw a polarized audience reaction, which was reflected in the viewership numbers. The first few episodes saw high viewership, but there was a noticeable drop by the series finale, indicating a mixed reception among fans.
+
+Overall, *Game of Thrones* enjoyed a dramatic rise in viewership, making it one of the most-watched TV series in history, but it also faced challenges in maintaining consistent audience satisfaction towards the end.
+
