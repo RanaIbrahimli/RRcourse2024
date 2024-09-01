@@ -1,0 +1,18 @@
+---
+title: "Analysis of 'Game of Thrones'"
+author: "Rana Ibrahimli"
+date: "2024-09-01"
+format: html
+---
+
+---
+
+## Quarto
+
+## Introduction
+
+*Game of Thrones* is a television series based on the *A Song of Ice and Fire* novels by George R. R. Martin. The show aired on HBO from 2011 to 2019 and gained worldwide popularity for its complex characters, intricate plots, and unexpected twists.
+
+
+![Game of Thrones Logo](game-of-thrones-emblem-3cawu9q97t4vfyw3.jpg)
+
